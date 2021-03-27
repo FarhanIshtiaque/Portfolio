@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 import 'package:portfolio/about/about.dart';
 import 'package:portfolio/home/home.dart';
+import 'package:portfolio/home/homeScreen.dart';
 import 'package:portfolio/portfolio/porfolio.dart';
 import 'package:portfolio/resume/resume.dart';
 import 'package:url_strategy/url_strategy.dart';
@@ -20,11 +21,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
+
       initialRoute: '/',
       getPages: [
         GetPage(
           name: '/',
-          page: () => Home(),
+          page: () => HomeScreen(),
         ),
         GetPage(
           name: '/about/',

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:get/get.dart';
+import 'package:portfolio/responsive.dart';
 
 
 
@@ -22,211 +23,213 @@ class _CustomAppBarState extends State<CustomAppBar> {
 
     double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
-    return Scaffold(
-      backgroundColor: Colors.transparent,
-      body: Container(
-        padding: EdgeInsets.all(30),
-        margin: EdgeInsets.all(20),
-        color: Colors.transparent,
-        child: Row(
-          children: [
-            Column(
-              children: [
-                MouseRegion(
-                  onEnter: (value){
-                    setState(() {
-                      onIth = true;
-                    });
-                  },
-                  onExit: (value){
-                    setState(() {
-                      onIth = false;
-                    });
-                  },
-                  child: ManuItem(
-                    title: 'Home',
-                    press: () {},
-                    textStyleA: TextStyle(
-                        fontSize: 15,
-                        fontFamily: 'Poppins',
-                        fontWeight: FontWeight.w200,
-
-                        color: Colors.white
-                    ),
-                  ),
-                ),
-                Container(
-                  width: 40,
-                  height: 2,
-                  color: onIth ? Color.fromRGBO(0, 158, 102, 1):Colors.transparent,
-
-                )
-              ],
-            ),
-            Spacer(),
-            Column(
-
-              children: [
-                MouseRegion(
-                  onEnter: (value){
-                    setState(() {
-                      onIta = true;
-                    });
-                  },
-                  onExit: (value){
-                    setState(() {
-                      onIta = false;
-                    });
-                  },
-                  child: ManuItem(
-
-                    title: 'About',
-                    press: (){Get.toNamed("/about",);},
-                    // press: () {
-                    //   Navigator.of(context).push(
-                    //     PageRouteBuilder(
-                    //       pageBuilder: (context, animation, secondaryAnimation) {
-                    //         return About(
-                    //           // transitionAnimation: animation,
-                    //         );
-                    //       },
-                    //       transitionDuration: Duration(seconds: 2),
-                    //     ),
-                    //   );
-                    // },
-                    textStyleA: TextStyle(
-                        fontSize: 15,
-                        fontFamily: 'Poppins',
-                        fontWeight: FontWeight.w200,
-
-                        color: Colors.white
-                    ),
-                  ),
-                ),
-                Container(
-                  width: 37,
-                  height: 2,
-                  color: onIta ? Color.fromRGBO(0, 158, 102, 1):Colors.transparent,
-
-                )
-              ],
-            ),
-            SizedBox(
-              width: 5,
-            ),
-            Column(
-              children: [
-                MouseRegion(
-                  onEnter: (value){
-                    setState(() {
-                      onItr = true;
-                    });
-                  },
-                  onExit: (value){
-                    setState(() {
-                      onItr = false;
-                    });
-                  },
-                  child: ManuItem(
-                    title: 'Resume',
-                    press: () {
-                      Get.toNamed("/resume",);
+    return SafeArea(
+      child: Scaffold(
+        backgroundColor: Colors.transparent,
+        body: Container(
+          padding:  EdgeInsets.all(Responsive.isTablet(context)?20:30),
+          margin: Responsive.isTablet(context)?EdgeInsets.all(10):EdgeInsets.all(20),
+          color: Colors.transparent,
+          child: Row(
+            children: [
+              Column(
+                children: [
+                  MouseRegion(
+                    onEnter: (value){
+                      setState(() {
+                        onIth = true;
+                      });
                     },
-                    textStyleA: TextStyle(
-                        fontSize: 15,
-                        fontFamily: 'Poppins',
-                        fontWeight: FontWeight.w200,
-                        color: Colors.white
-                    ),
-                  ),
-                ),
-                Container(
-                  width: 49,
-                  height: 2,
-                  color: onItr?Color.fromRGBO(0, 158, 102, 1):Colors.transparent,
-
-                )
-              ],
-            ),
-            SizedBox(
-              width: 5,
-
-            ),
-            Column(
-              children: [
-                MouseRegion(
-                  onEnter: (value){
-                    setState(() {
-                      onItp = true;
-                    });
-                  },
-                  onExit: (value){
-                    setState(() {
-                      onItp = false;
-                    });
-                  },
-                  child: ManuItem(
-                    title: 'Portfolio',
-                    press: () {
-                      Get.toNamed("/portfolio",);
+                    onExit: (value){
+                      setState(() {
+                        onIth = false;
+                      });
                     },
-                    textStyleA: TextStyle(
-                        fontSize: 15,
-                        fontFamily: 'Poppins',
-                        fontWeight: FontWeight.w200,
-                        color: Colors.white
+                    child: ManuItem(
+                      title: 'Home',
+                      press: () {},
+                      textStyleA: TextStyle(
+                          fontSize: 15,
+                          fontFamily: 'Poppins',
+                          fontWeight: FontWeight.w200,
+
+                          color: Colors.white
+                      ),
                     ),
                   ),
-                ),
-                Container(
-                  width: 49,
-                  height: 2,
-                  color: onItp ?Color.fromRGBO(0, 158, 102, 1):Colors.transparent,
+                  Container(
+                    width: 40,
+                    height: 2,
+                    color: onIth ? Color.fromRGBO(0, 158, 102, 1):Colors.transparent,
 
-                )
-              ],
-            ),
-            SizedBox(
-              width: 5,
+                  )
+                ],
+              ),
+              Spacer(),
+              Column(
 
-            ),
-            Column(
-              children: [
-                MouseRegion(
-                  cursor: SystemMouseCursors.click,
-                  onEnter: (value){
-                    setState(() {
-                      onItc = true;
-                    });
-                  },
-                  onExit: (value){
-                    setState(() {
-                      onItc = false;
-                    });
-                  },
-                  child: ManuItem(
-
-                    title: 'Contact',
-                    press: () {
-                      Get.toNamed("/contact",);
+                children: [
+                  MouseRegion(
+                    onEnter: (value){
+                      setState(() {
+                        onIta = true;
+                      });
                     },
-                    textStyleA: TextStyle(
-                        fontSize: 15,
-                        fontFamily: 'Poppins',
-                        fontWeight: FontWeight.w200,
-                        color: Colors.white
+                    onExit: (value){
+                      setState(() {
+                        onIta = false;
+                      });
+                    },
+                    child: ManuItem(
+
+                      title: 'About',
+                      press: (){Get.toNamed("/about",);},
+                      // press: () {
+                      //   Navigator.of(context).push(
+                      //     PageRouteBuilder(
+                      //       pageBuilder: (context, animation, secondaryAnimation) {
+                      //         return About(
+                      //           // transitionAnimation: animation,
+                      //         );
+                      //       },
+                      //       transitionDuration: Duration(seconds: 2),
+                      //     ),
+                      //   );
+                      // },
+                      textStyleA: TextStyle(
+                          fontSize: 15,
+                          fontFamily: 'Poppins',
+                          fontWeight: FontWeight.w200,
+
+                          color: Colors.white
+                      ),
                     ),
                   ),
-                ),
-                Container(
-                  width: 52,
-                  height: 2,
-                  color: onItc ?Color.fromRGBO(0, 158, 102, 1):Colors.transparent,
+                  Container(
+                    width: 37,
+                    height: 2,
+                    color: onIta ? Color.fromRGBO(0, 158, 102, 1):Colors.transparent,
 
-                )
-              ],
-            ),
-          ],
+                  )
+                ],
+              ),
+              // SizedBox(
+              //   width:  5,
+              // ),
+              Column(
+                children: [
+                  MouseRegion(
+                    onEnter: (value){
+                      setState(() {
+                        onItr = true;
+                      });
+                    },
+                    onExit: (value){
+                      setState(() {
+                        onItr = false;
+                      });
+                    },
+                    child: ManuItem(
+                      title: 'Resume',
+                      press: () {
+                        Get.toNamed("/resume",);
+                      },
+                      textStyleA: TextStyle(
+                          fontSize: 15,
+                          fontFamily: 'Poppins',
+                          fontWeight: FontWeight.w200,
+                          color: Colors.white
+                      ),
+                    ),
+                  ),
+                  Container(
+                    width: 49,
+                    height: 2,
+                    color: onItr?Color.fromRGBO(0, 158, 102, 1):Colors.transparent,
+
+                  )
+                ],
+              ),
+              // SizedBox(
+              //   width: 5,
+              //
+              // ),
+              Column(
+                children: [
+                  MouseRegion(
+                    onEnter: (value){
+                      setState(() {
+                        onItp = true;
+                      });
+                    },
+                    onExit: (value){
+                      setState(() {
+                        onItp = false;
+                      });
+                    },
+                    child: ManuItem(
+                      title: 'Portfolio',
+                      press: () {
+                        Get.toNamed("/portfolio",);
+                      },
+                      textStyleA: TextStyle(
+                          fontSize: 15,
+                          fontFamily: 'Poppins',
+                          fontWeight: FontWeight.w200,
+                          color: Colors.white
+                      ),
+                    ),
+                  ),
+                  Container(
+                    width: 49,
+                    height: 2,
+                    color: onItp ?Color.fromRGBO(0, 158, 102, 1):Colors.transparent,
+
+                  )
+                ],
+              ),
+              // SizedBox(
+              //   width: 5,
+              //
+              // ),
+              Column(
+                children: [
+                  MouseRegion(
+                    cursor: SystemMouseCursors.click,
+                    onEnter: (value){
+                      setState(() {
+                        onItc = true;
+                      });
+                    },
+                    onExit: (value){
+                      setState(() {
+                        onItc = false;
+                      });
+                    },
+                    child: ManuItem(
+
+                      title: 'Contact',
+                      press: () {
+                        Get.toNamed("/contact",);
+                      },
+                      textStyleA: TextStyle(
+                          fontSize: 15,
+                          fontFamily: 'Poppins',
+                          fontWeight: FontWeight.w200,
+                          color: Colors.white
+                      ),
+                    ),
+                  ),
+                  Container(
+                    width: 52,
+                    height: 2,
+                    color: onItc ?Color.fromRGBO(0, 158, 102, 1):Colors.transparent,
+
+                  )
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );
