@@ -6,6 +6,7 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:portfolio/widgets/customAppBar.dart';
 import 'package:portfolio/widgets/side_box.dart';
+import 'package:portfolio/widgets/social.dart';
 import 'package:portfolio/widgets/video_widget.dart';
 
 import 'package:url_launcher/url_launcher.dart';
@@ -47,6 +48,7 @@ class _HomeScreenState extends State<HomeScreen> {
             drawer: ConstrainedBox(
               constraints: BoxConstraints(maxWidth: 250),
               child: SideMenu(),
+
             ),
             body: Stack(
               children: [
@@ -101,89 +103,8 @@ class _HomeScreenState extends State<HomeScreen> {
                 Positioned(
                   top: _size.height*.9,
                   left: _size.width*.3,
-                  child: Row(
-                    children: [
-                      GestureDetector(
-                        onTap: () {
-                          launch('https://twitter.com/rexfarhan');
-                        },
-                        child: SvgPicture.asset(
-                          'assets/Twitter - Negative.svg',
-                          color:
-                          Color.fromRGBO(26, 145, 218, 1) ,
-                          semanticsLabel: 'Twitter',
-                          width: 20,
-                          height: 20,
-                        ),
-                      ),
-                      SizedBox(
-                        width: 10,
-                      ),
-                      GestureDetector(
+                  child: SocialIcon()
 
-                        onTap: () {
-                          launch('https://www.facebook.com/farhanishtiaque/');
-                        },
-                        child: SvgPicture.asset(
-                          'assets/Facebook - Negative.svg',
-                          color:
-                          Color.fromRGBO(24, 119, 242, 1) ,
-                          semanticsLabel: 'Facebook',
-                          width: 20,
-                          height: 20,
-                        ),
-                      ),
-                      SizedBox(
-                        width: 10,
-                      ),
-                      GestureDetector(
-                        onTap: () {
-                          launch('https://www.instagram.com/rexfarhan/');
-                        },
-                        child: SvgPicture.asset(
-                          'assets/Instagram - Negative.svg',
-                          color:
-                          Color.fromRGBO(221, 42, 123, 1) ,
-                          semanticsLabel: 'Instagram',
-                          width: 20,
-                          height: 20,
-                        ),
-                      ),
-                      SizedBox(
-                        width: 10,
-                      ),
-                      GestureDetector(
-                        onTap: () {
-                          launch(
-                              'https://www.linkedin.com/in/md-farhan-ishtiaque-43714b176/');
-                        },
-                        child: SvgPicture.asset(
-                          'assets/LinkedIn - Negative.svg',
-                          color:
-                          Color.fromRGBO(10, 102, 194, 1) ,
-                          semanticsLabel: 'LinkedIn',
-                          width: 20,
-                          height: 20,
-                        ),
-                      ),
-                      SizedBox(
-                        width: 10,
-                      ),
-                      GestureDetector(
-                        onTap: () {
-                          launch('https://github.com/FarhanIshtiaque');
-                        },
-                        child: SvgPicture.asset(
-                          'assets/git.svg',
-                          color:
-                          Color.fromRGBO(64, 120, 192, 1) ,
-                          semanticsLabel: 'git',
-                          width: 20,
-                          height: 20,
-                        ),
-                      ),
-                    ],
-                  ),
                 ),
 
               ],
@@ -245,89 +166,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 Positioned(
                   top: _size.height*.9,
                   left: _size.width*.45,
-                  child: Row(
-                    children: [
-                      GestureDetector(
-                        onTap: () {
-                          launch('https://twitter.com/rexfarhan');
-                        },
-                        child: SvgPicture.asset(
-                          'assets/Twitter - Negative.svg',
-                          color:
-                          Color.fromRGBO(26, 145, 218, 1) ,
-                          semanticsLabel: 'Twitter',
-                          width: 20,
-                          height: 20,
-                        ),
-                      ),
-                      SizedBox(
-                        width: 10,
-                      ),
-                      GestureDetector(
-
-                        onTap: () {
-                          launch('https://www.facebook.com/farhanishtiaque/');
-                        },
-                        child: SvgPicture.asset(
-                          'assets/Facebook - Negative.svg',
-                          color:
-                          Color.fromRGBO(24, 119, 242, 1) ,
-                          semanticsLabel: 'Facebook',
-                          width: 20,
-                          height: 20,
-                        ),
-                      ),
-                      SizedBox(
-                        width: 10,
-                      ),
-                      GestureDetector(
-                        onTap: () {
-                          launch('https://www.instagram.com/rexfarhan/');
-                        },
-                        child: SvgPicture.asset(
-                          'assets/Instagram - Negative.svg',
-                          color:
-                          Color.fromRGBO(221, 42, 123, 1) ,
-                          semanticsLabel: 'Instagram',
-                          width: 20,
-                          height: 20,
-                        ),
-                      ),
-                      SizedBox(
-                        width: 10,
-                      ),
-                      GestureDetector(
-                        onTap: () {
-                          launch(
-                              'https://www.linkedin.com/in/md-farhan-ishtiaque-43714b176/');
-                        },
-                        child: SvgPicture.asset(
-                          'assets/LinkedIn - Negative.svg',
-                          color:
-                          Color.fromRGBO(10, 102, 194, 1) ,
-                          semanticsLabel: 'LinkedIn',
-                          width: 20,
-                          height: 20,
-                        ),
-                      ),
-                      SizedBox(
-                        width: 10,
-                      ),
-                      GestureDetector(
-                        onTap: () {
-                          launch('https://github.com/FarhanIshtiaque');
-                        },
-                        child: SvgPicture.asset(
-                          'assets/git.svg',
-                          color:
-                          Color.fromRGBO(64, 120, 192, 1) ,
-                          semanticsLabel: 'git',
-                          width: 20,
-                          height: 20,
-                        ),
-                      ),
-                    ],
-                  ),
+                  child: SocialIcon()
                 ),
 
               ],
@@ -388,154 +227,8 @@ class _HomeScreenState extends State<HomeScreen> {
               Positioned(
                 left: _size.width * .93,
                 top: _size.height * .7,
-                child: Column(
-                  children: [
-                    MouseRegion(
-                      cursor: SystemMouseCursors.click,
-                      onEnter: (value) {
-                        setState(() {
-                          onTt = true;
-                        });
-                      },
-                      onExit: (value) {
-                        setState(() {
-                          onTt = false;
-                        });
-                      },
-                      child: GestureDetector(
-                        onTap: () {
-                          launch('https://twitter.com/rexfarhan');
-                        },
-                        child: SvgPicture.asset(
-                          'assets/Twitter - Negative.svg',
-                          color:
-                          onTt ? Color.fromRGBO(26, 145, 218, 1) : Colors.white,
-                          semanticsLabel: 'Twitter',
-                          width: 20,
-                          height: 20,
-                        ),
-                      ),
-                    ),
-                    SizedBox(
-                      height: 15,
-                    ),
-                    MouseRegion(
-                      cursor: SystemMouseCursors.click,
-                      onEnter: (value) {
-                        setState(() {
-                          onFb = true;
-                        });
-                      },
-                      onExit: (value) {
-                        setState(() {
-                          onFb = false;
-                        });
-                      },
-                      child: GestureDetector(
+                 child: SocialIcon()
 
-                        onTap: () {
-                          launch('https://www.facebook.com/farhanishtiaque/');
-                        },
-                        child: SvgPicture.asset(
-                          'assets/Facebook - Negative.svg',
-                          color:
-                          onFb ? Color.fromRGBO(24, 119, 242, 1) : Colors.white,
-                          semanticsLabel: 'Facebook',
-                          width: 20,
-                          height: 20,
-                        ),
-                      ),
-                    ),
-                    SizedBox(
-                      height: 15,
-                    ),
-                    MouseRegion(
-                      cursor: SystemMouseCursors.click,
-                      onEnter: (value) {
-                        setState(() {
-                          onIn = true;
-                        });
-                      },
-                      onExit: (value) {
-                        setState(() {
-                          onIn = false;
-                        });
-                      },
-                      child: GestureDetector(
-                        onTap: () {
-                          launch('https://www.instagram.com/rexfarhan/');
-                        },
-                        child: SvgPicture.asset(
-                          'assets/Instagram - Negative.svg',
-                          color:
-                          onIn ? Color.fromRGBO(221, 42, 123, 1) : Colors.white,
-                          semanticsLabel: 'Instagram',
-                          width: 20,
-                          height: 20,
-                        ),
-                      ),
-                    ),
-                    SizedBox(
-                      height: 15,
-                    ),
-                    MouseRegion(
-                      cursor: SystemMouseCursors.click,
-                      onEnter: (value) {
-                        setState(() {
-                          onln = true;
-                        });
-                      },
-                      onExit: (value) {
-                        setState(() {
-                          onln = false;
-                        });
-                      },
-                      child: GestureDetector(
-                        onTap: () {
-                          launch(
-                              'https://www.linkedin.com/in/md-farhan-ishtiaque-43714b176/');
-                        },
-                        child: SvgPicture.asset(
-                          'assets/LinkedIn - Negative.svg',
-                          color:
-                          onln ? Color.fromRGBO(10, 102, 194, 1) : Colors.white,
-                          semanticsLabel: 'LinkedIn',
-                          width: 20,
-                          height: 20,
-                        ),
-                      ),
-                    ),
-                    SizedBox(
-                      height: 15,
-                    ),
-                    MouseRegion(
-                      cursor: SystemMouseCursors.click,
-                      onEnter: (value) {
-                        setState(() {
-                          onGt = true;
-                        });
-                      },
-                      onExit: (value) {
-                        setState(() {
-                          onGt = false;
-                        });
-                      },
-                      child: GestureDetector(
-                        onTap: () {
-                          launch('https://github.com/FarhanIshtiaque');
-                        },
-                        child: SvgPicture.asset(
-                          'assets/git.svg',
-                          color:
-                          onGt ? Color.fromRGBO(64, 120, 192, 1) : Colors.white,
-                          semanticsLabel: 'git',
-                          width: 20,
-                          height: 20,
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
               ),
             ],
           ),

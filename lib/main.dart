@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 import 'package:portfolio/about/about.dart';
-import 'package:portfolio/home/home.dart';
+
 import 'package:portfolio/home/homeScreen.dart';
 import 'package:portfolio/portfolio/porfolio.dart';
 import 'package:portfolio/resume/resume.dart';
