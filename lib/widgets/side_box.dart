@@ -14,18 +14,21 @@ class SideMenu extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: double.infinity,
+      width: 250,
 
       color: Color.fromRGBO(22, 22, 22, 1),
       child: SafeArea(
         child: SingleChildScrollView(
           padding: EdgeInsets.symmetric(horizontal: 20.0),
           child: Column(
+
             children: [
               Row(
                 children: [
                   SvgPicture.asset(
                     "assets/boy.svg",
-                    width: 46,
+                    width: 20,
+                    height: 20,
                   ),
                   Spacer(),
                   // We don't want to show this close button on Desktop mood

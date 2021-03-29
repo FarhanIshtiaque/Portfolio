@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:get/route_manager.dart';
 import 'package:portfolio/responsive.dart';
 import 'dart:math';
 import 'dart:ui';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:portfolio/widgets/customAppBar.dart';
-import 'package:portfolio/widgets/side_box.dart';
+import 'dart:math' as math;
 import 'package:portfolio/widgets/social.dart';
 import 'package:portfolio/widgets/video_widget.dart';
 
@@ -45,10 +46,96 @@ class _HomeScreenState extends State<HomeScreen> {
     return Responsive(
         mobile: SafeArea(
           child: Scaffold(
-            drawer: ConstrainedBox(
-              constraints: BoxConstraints(maxWidth: 250),
-              child: SideMenu(),
+            extendBodyBehindAppBar: true,
+            appBar: AppBar(
+              automaticallyImplyLeading: false,
+              backgroundColor: Colors.transparent,
+              elevation: 0.0,
+              actions: [
+                Padding(
+                  padding: const EdgeInsets.only(right: 40,top: 20),
+                  child: PopupMenuButton<String>(
+                    color: Color.fromRGBO(16, 16, 16, 1),
+                    child: Transform(
+                      alignment: Alignment.center,
+                      transform: Matrix4.rotationY(math.pi),
+                      child: SvgPicture.asset(
+                        'Menu.svg',
+                        color: Colors.white,
+                        width: 30,
+                        height: 30,
+                      ),
+                    ),
+                    itemBuilder: (context) => <PopupMenuEntry<String>>[
+                      PopupMenuItem<String>(
+                        value: 'About',
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 20),
+                          child: Text('About',
+                          style: TextStyle(
+                            fontWeight: FontWeight.w200,
+                            color: Color(0xFFD9f9f9f),
+                            fontFamily: 'Poppins',
+                            fontSize: 16
+                          ),),
+                        ),
+                      ),
+                      PopupMenuItem<String>(
+                        value: 'Resume',
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 20),
+                          child: Text('Resume',
+                            style: TextStyle(
+                                fontWeight: FontWeight.w200,
+                                color: Color(0xFFD9f9f9f),
+                                fontFamily: 'Poppins',
+                                fontSize: 16
+                            ),),
+                        ),
+                      ),
+                      PopupMenuItem<String>(
+                        value: 'Portfolio',
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 20),
+                          child: Text('Portfolio',
+                            style: TextStyle(
+                                fontWeight: FontWeight.w200,
+                                color: Color(0xFFD9f9f9f),
+                                fontFamily: 'Poppins',
+                                fontSize: 16
+                            ),),
+                        ),
+                      ),
+                      PopupMenuItem<String>(
+                        value: 'Contact',
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 20),
+                          child: Text('Contact',
+                            style: TextStyle(
+                                fontWeight: FontWeight.w200,
+                                color: Color(0xFFD9f9f9f),
+                                fontFamily: 'Poppins',
+                                fontSize: 16
+                            ),),
+                        ),
+                      ),
+                    ],
+                    onSelected: (value){
+                      if(value =='About'){
+                        Get.toNamed("/about",);
+                      }else if(value =='Resume'){
+                        Get.toNamed("/resume",);
+                      }else if(value =='Portfolio'){
+                        Get.toNamed("/portfolio",);
+                      }else if(value =='Contact'){
+                        Get.toNamed("/contact",);
+                      }
 
+
+                    },
+                  ),
+                )
+              ],
             ),
             body: Stack(
               children: [
@@ -94,19 +181,12 @@ class _HomeScreenState extends State<HomeScreen> {
                         onComplete: _nextCommand,
                       ),
                     ),
-
-
-
                   ],
                 ),
-
                 Positioned(
-                  top: _size.height*.9,
-                  left: _size.width*.3,
-                  child: SocialIcon()
-
-                ),
-
+                    top: _size.height * .9,
+                    left: _size.width * .3,
+                    child: SocialIcon()),
               ],
             ),
           ),
@@ -157,18 +237,13 @@ class _HomeScreenState extends State<HomeScreen> {
                         onComplete: _nextCommand,
                       ),
                     ),
-
-
-
                   ],
                 ),
                 CustomAppBar(),
                 Positioned(
-                  top: _size.height*.9,
-                  left: _size.width*.45,
-                  child: SocialIcon()
-                ),
-
+                    top: _size.height * .9,
+                    left: _size.width * .45,
+                    child: SocialIcon()),
               ],
             ),
           ),
@@ -218,23 +293,22 @@ class _HomeScreenState extends State<HomeScreen> {
                       onComplete: _nextCommand,
                     ),
                   ),
-                  SizedBox(height: 10,),
-
-
+                  SizedBox(
+                    height: 10,
+                  ),
                 ],
               ),
               CustomAppBar(),
               Positioned(
-                left: _size.width * .93,
-                top: _size.height * .7,
-                 child: SocialIcon()
-
-              ),
+                  left: _size.width * .93,
+                  top: _size.height * .7,
+                  child: SocialIcon()),
             ],
           ),
         ));
   }
 }
+
 class TypeWriter extends StatefulWidget {
   final String prefixText;
   final TextStyle preFixTextStyle;
@@ -300,7 +374,7 @@ class _TypeWriterState extends State<TypeWriter> {
       return;
     }
     final firstDifferentCharacter =
-    _firstDifferentCharacter(_textToType, _typedText);
+        _firstDifferentCharacter(_textToType, _typedText);
     await _eraseToIndex(firstDifferentCharacter);
     if (!mounted) {
       return;
@@ -362,7 +436,7 @@ class _TypeWriterState extends State<TypeWriter> {
   Duration _lerpDuration(Duration d1, Duration d2, double percent) {
     return Duration(
       milliseconds:
-      lerpDouble(d1.inMilliseconds, d2.inMilliseconds, percent).round(),
+          lerpDouble(d1.inMilliseconds, d2.inMilliseconds, percent).round(),
     );
   }
 
@@ -475,4 +549,3 @@ class BlinkingCursorController with ChangeNotifier {
     notifyListeners();
   }
 }
-
