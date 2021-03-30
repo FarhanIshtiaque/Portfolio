@@ -25,9 +25,10 @@ class _SkillCardState extends State<SkillCard> {
 
   @override
   Widget build(BuildContext context) {
+    Size _size = MediaQuery.of(context).size;
     return Container(
       height: 250,
-      width: 362,
+      width: _size.width/3.7734807  ,
       color: Color.fromRGBO(15, 15, 15, 15),
 
       child: Column(
@@ -48,7 +49,7 @@ class _SkillCardState extends State<SkillCard> {
               child: AnimatedContainer(
                 curve: Curves.easeOut,
                 duration: Duration(milliseconds: 300),
-                width: onContainer ? 362 : 330,
+                width: onContainer ? _size.width/3.7734807 : _size.width/4.1393939,
                 height: onContainer ? 248 : 220,
                 // color: Color.fromRGBO(22, 22, 22, 1),
                 decoration: BoxDecoration(
@@ -68,8 +69,8 @@ class _SkillCardState extends State<SkillCard> {
                       color: onContainer
                           ? Color.fromRGBO(0, 158, 102, 1)
                           : Colors.white,
-                      height: 55,
-                      width: 55,
+                      height: 50,
+                      width: 50,
                     ),
                     SizedBox(
                       height: 30,

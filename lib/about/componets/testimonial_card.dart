@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+
+
 
 class TestimonialCard extends StatefulWidget {
   final String avater;
@@ -19,8 +21,9 @@ class _TestimonialCardState extends State<TestimonialCard> {
   bool onCon = false;
   @override
   Widget build(BuildContext context) {
+    Size _size = MediaQuery.of(context).size;
 
-    return MouseRegion(
+    return  MouseRegion(
       onEnter: (value){
         setState(() {
           onCon =true;
@@ -35,7 +38,7 @@ class _TestimonialCardState extends State<TestimonialCard> {
         duration: Duration(milliseconds: 200),
         curve: Curves.easeOut,
         height: 242 ,
-        width: 530,
+        width: _size.width/2.577,
 
 
         decoration: BoxDecoration(
@@ -48,14 +51,14 @@ class _TestimonialCardState extends State<TestimonialCard> {
           ]: [],
         ),
         child: Padding(
-          padding: const EdgeInsets.all(40.0),
+          padding: const EdgeInsets.all(30.0),
           child: Column(
             children: [
               Row(
                 children: [
-                  SvgPicture.asset(widget.avater,
-                    width: 54,
-                    height: 54,
+                  Image(image: AssetImage(widget.avater),
+                    height: 40,
+                    width: 40,
                   ),
                   SizedBox(width: 5,),
                   Column(
@@ -84,9 +87,10 @@ class _TestimonialCardState extends State<TestimonialCard> {
                   ),
                   Spacer(),
                   SvgPicture.asset('quote.svg',
-                    width: 50,
-                    height: 50,
-                    color:onCon?Color.fromRGBO(0, 158, 102, 1):Colors.white,
+
+                    width: 35,
+                    height: 35,
+                     color:onCon?Color.fromRGBO(0, 158, 102, 1):Colors.white,
                   )
 
                 ],
@@ -96,7 +100,7 @@ class _TestimonialCardState extends State<TestimonialCard> {
                 widget.review,
                 style: TextStyle(
                   fontWeight: FontWeight.w300,
-                  fontSize: 15,
+                  fontSize: _size.width/91.07,
                   fontFamily: 'Poppins',
                   color: Color(0xFFD9f9f9f),
                 ),
