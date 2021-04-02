@@ -2,6 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
+import '../../responsive.dart';
+
 class SkillCardMobile extends StatelessWidget {
   final String description;
   final String assetName;
@@ -16,13 +18,13 @@ class SkillCardMobile extends StatelessWidget {
     return Container(
 
 
-      width: double.infinity,
-      height:250,
+      width:Responsive.isTablet(context)?210: double.infinity,
+      height:Responsive.isTablet(context)?220:250,
       // color: Color.fromRGBO(22, 22, 22, 1),
       decoration: BoxDecoration(
         border: Border.all(
           color:  Color.fromRGBO(0, 158, 102, 1),
-          width: 2
+          width: 1
         ),
         color: Color.fromRGBO(22, 22, 22, 1),
         boxShadow: [
@@ -39,16 +41,16 @@ class SkillCardMobile extends StatelessWidget {
             assetName,
             color: Color.fromRGBO(0, 158, 102, 1)
                 ,
-            height: 50,
-            width: 50,
+            height:Responsive.isTablet(context)?40: 50,
+            width:Responsive.isTablet(context)?40: 50,
           ),
           SizedBox(
-            height: 30,
+            height:Responsive.isTablet(context)?20: 30,
           ),
           Text(
             skillName,
             style: TextStyle(
-              fontSize: 20,
+              fontSize:Responsive.isTablet(context)?15: 20,
               color: Colors.white,
               fontFamily: 'Poppins',
               fontWeight: FontWeight.w500,

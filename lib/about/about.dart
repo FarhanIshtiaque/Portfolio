@@ -13,9 +13,7 @@ class _AboutState extends State<About> {
   Widget build(BuildContext context) {
     return Responsive(
         mobile: AboutMobile(),
-        tablet: Container(
-          color: Colors.black,
-        ),
+        tablet: AboutMobile(),
         desktop: AboutDesktop(),
     );
   }

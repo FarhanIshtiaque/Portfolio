@@ -15,11 +15,16 @@ class TestimonialCardMobile extends StatelessWidget {
 
     return Container(
 
-      height: 355 ,
+      height: 270 ,
       width: double.infinity,
 
 
       decoration: BoxDecoration(
+        border: Border.all(
+            color:  Color.fromRGBO(0, 158, 102, 1),
+            width: 1
+
+        ),
         color: Color.fromRGBO(22, 22, 22, 1),
         boxShadow: [
           BoxShadow(
