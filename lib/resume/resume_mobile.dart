@@ -44,19 +44,19 @@ class ResumeScreenMobile extends StatelessWidget {
                       itemText: 'BSc in Computer Science Engineering',
                       instName: 'North South University (2015-2020)',
                       description:
-                          'Bashundhara, Dhaka-1229, Bangladesh\nwedsite: www.northsouth.edu',
+                          'Bashundhara, Dhaka-1229,\nBangladesh\nwedsite: www.northsouth.edu',
                     ),
                     ResumeItem(
                       itemText: 'HSC',
                       instName: 'Gazipur Cantornment College (2012-2014)',
                       description:
-                          'Gazipur Cantonment, Gazipur-1703, Bangladesh.\nwebsite: www.gccbof.edu.bd',
+                          'Gazipur Cantonment,\nGazipur-1703, Bangladesh.\nwebsite: www.gccbof.edu.bd',
                     ),
                     ResumeItem(
                       itemText: 'SSC',
                       instName: 'BARI High School (2006-2012)',
                       description:
-                          'Bangladesh Agricultural Research Institute, Gazipur 1701\nwebsite: www.barihighschool.edu.bd',
+                          'Bangladesh Agricultural Research Institute,\nGazipur 1701\nwebsite: www.barihighschool.edu.bd',
                     ),
                     SizedBox(
                       height: 37,
@@ -85,7 +85,7 @@ class ResumeScreenMobile extends StatelessWidget {
                       itemText: 'Junior Software Developer',
                       instName: 'INSOUL IT / (2020 - Present)',
                       description:
-                          'Chandana, Chowrasta - Joydebpur Road,Gazipur 1702\nwebsite: www.insoulit.com',
+                          'Chandana, Chowrasta - Joydebpur Road,\nGazipur 1702\nwebsite: www.insoulit.com',
                     ),
 
                     // ResumeItem(),

@@ -21,7 +21,7 @@ class ResumeItem extends StatelessWidget {
       children: [
         Container(
           width:Responsive.isMobile(context)?double.infinity: width/2.48,
-          height: 183,
+          height: Responsive.isMobile(context)?210:183,
           color: Color.fromRGBO(22, 22, 22, 1),
           child: Stack(
             children: [
@@ -29,7 +29,7 @@ class ResumeItem extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Container(
-                    height: 183,
+                    height: Responsive.isMobile(context)?210: 183,
                     width: 2,
                     color: Color.fromRGBO(0, 158, 102, 1),
                   )
@@ -59,7 +59,7 @@ class ResumeItem extends StatelessWidget {
               ),
               Positioned(
                 top: 32,
-                left: 48,
+                left:Responsive.isMobile(context)?28: 48,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
