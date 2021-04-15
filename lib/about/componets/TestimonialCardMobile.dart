@@ -12,10 +12,11 @@ class TestimonialCardMobile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Size _size = MediaQuery.of(context).size;
 
     return Container(
 
-      height: 270 ,
+      height: _size.width>330 ? 270 : 300 ,
       width: double.infinity,
 
 
@@ -40,8 +41,8 @@ class TestimonialCardMobile extends StatelessWidget {
             Row(
               children: [
                 Image(image: AssetImage(avater),
-                  height: 40,
-                  width: 40,
+                  height:_size.width>330? 40:30,
+                  width: _size.width>330? 40:30,
                 ),
                 SizedBox(width: 5,),
                 Column(
@@ -51,7 +52,7 @@ class TestimonialCardMobile extends StatelessWidget {
                       clientName,
                       style: TextStyle(
                         fontWeight: FontWeight.w400,
-                        fontSize: 15,
+                        fontSize:_size.width>330? 15:13,
                         fontFamily: 'Poppins',
                         color: Colors.white,
                       ),
@@ -60,7 +61,7 @@ class TestimonialCardMobile extends StatelessWidget {
                       designation,
                       style: TextStyle(
                         fontWeight: FontWeight.w400,
-                        fontSize: 15,
+                        fontSize:_size.width>330? 15:13,
                         fontFamily: 'Poppins',
                         color: Color(0xFFD9f9f9f),
                       ),

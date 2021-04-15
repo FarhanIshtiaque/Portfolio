@@ -18,7 +18,6 @@ class _AboutMobileState extends State<AboutMobile> {
   @override
   Widget build(BuildContext context) {
     Size _size = MediaQuery.of(context).size;
-    print(_size.width);
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: CustomAppBar(),

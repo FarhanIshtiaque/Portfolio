@@ -3,7 +3,7 @@ import 'package:get/route_manager.dart';
 import 'package:portfolio/about/componets/header_info.dart';
 import 'package:portfolio/resume/components/resume_item.dart';
 import 'package:portfolio/resume/components/skill_bar.dart';
-import 'package:portfolio/resume/resume_desktop.dart';
+
 
 class ResumeScreenMobile extends StatelessWidget {
   @override

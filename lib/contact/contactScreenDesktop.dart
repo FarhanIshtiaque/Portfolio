@@ -47,7 +47,7 @@ class _ContactScreenDesktopState extends State<ContactScreenDesktop> {
                   ),
                   Center(
                     child: Text(
-                      'Feel free to contact me anytimes',
+                      'Feel free to contact me anytime',
                       style: TextStyle(
                         fontWeight: FontWeight.w300,
                         fontSize: 15,
