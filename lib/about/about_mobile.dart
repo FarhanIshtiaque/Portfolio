@@ -17,7 +17,7 @@ class AboutMobile extends StatefulWidget {
 class _AboutMobileState extends State<AboutMobile> {
   @override
   Widget build(BuildContext context) {
-    Size _size = MediaQuery.of(context).size;
+
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: CustomAppBar(),
@@ -226,7 +226,7 @@ class _AboutMobileState extends State<AboutMobile> {
                         children: [
                           SkillCardMobile(
                             skillName: 'UI/UX Design',
-                            assetName: 'assets/ux.svg',
+                            assetName: 'assets/UX.png',
                             description: 'Tools : Adobe XD,Figma',
                           ),
                           SizedBox(
@@ -234,7 +234,7 @@ class _AboutMobileState extends State<AboutMobile> {
                           ),
                           SkillCardMobile(
                             skillName: 'Mobile App Development',
-                            assetName: 'assets/flutter.svg',
+                            assetName: 'assets/flt.png',
                             description: 'Framework: Flutter(Android,iOS)',
                           ),
                           SizedBox(
@@ -242,7 +242,7 @@ class _AboutMobileState extends State<AboutMobile> {
                           ),
                           SkillCardMobile(
                             skillName: 'Web Development',
-                            assetName: 'assets/www.svg',
+                            assetName: 'assets/globe.png',
                             description: 'Language: Flutter,Laravel',
                           )
                         ],

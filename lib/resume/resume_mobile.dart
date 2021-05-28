@@ -4,7 +4,6 @@ import 'package:portfolio/about/componets/header_info.dart';
 import 'package:portfolio/resume/components/resume_item.dart';
 import 'package:portfolio/resume/components/skill_bar.dart';
 
-
 class ResumeScreenMobile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -145,7 +144,9 @@ class ResumeScreenMobile extends StatelessWidget {
                       barWidth: (_size.width - 40) * .7,
                       percent: '70%',
                     ),
-                    SizedBox(height: 50,)
+                    SizedBox(
+                      height: 50,
+                    )
                   ],
                 )
               ],

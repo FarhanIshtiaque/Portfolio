@@ -33,6 +33,7 @@ class _CustomAppBarState extends State<CustomAppBar> {
               Column(
                 children: [
                   MouseRegion(
+                    cursor: SystemMouseCursors.click,
                     onEnter: (value){
                       setState(() {
                         onIth = true;
@@ -44,7 +45,7 @@ class _CustomAppBarState extends State<CustomAppBar> {
                       });
                     },
                     child: ManuItem(
-                      title: 'Home',
+                      title: 'Snowman',
                       press: () {},
                       textStyleA: TextStyle(
                           fontSize: 15,
@@ -68,6 +69,7 @@ class _CustomAppBarState extends State<CustomAppBar> {
 
                 children: [
                   MouseRegion(
+                    cursor: SystemMouseCursors.click,
                     onEnter: (value){
                       setState(() {
                         onIta = true;
@@ -117,6 +119,7 @@ class _CustomAppBarState extends State<CustomAppBar> {
               Column(
                 children: [
                   MouseRegion(
+                    cursor: SystemMouseCursors.click,
                     onEnter: (value){
                       setState(() {
                         onItr = true;
@@ -155,6 +158,7 @@ class _CustomAppBarState extends State<CustomAppBar> {
               Column(
                 children: [
                   MouseRegion(
+                    cursor: SystemMouseCursors.click,
                     onEnter: (value){
                       setState(() {
                         onItp = true;

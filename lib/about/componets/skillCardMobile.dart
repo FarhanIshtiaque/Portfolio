@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
+
 
 import '../../responsive.dart';
 
@@ -37,7 +37,7 @@ class SkillCardMobile extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          SvgPicture.asset(
+          Image.asset(
             assetName,
             color: Color.fromRGBO(0, 158, 102, 1)
                 ,

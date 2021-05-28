@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/route_manager.dart';
 class ContactScreenDesktop extends StatefulWidget {
   @override
@@ -167,7 +166,7 @@ class _ContactScreenDesktopState extends State<ContactScreenDesktop> {
 
                                   contentPadding: EdgeInsets.only(left: 14,right: 14,top: 9,bottom: 9),
                                   focusedBorder: UnderlineInputBorder(
-                                    borderSide: BorderSide(color:Color.fromRGBO(0, 209, 135, 1)),
+                                    borderSide: BorderSide(color:Color.fromRGBO(0, 158, 102, 1)),
                                   ),
 
 
@@ -304,22 +303,22 @@ class _ContactScreenDesktopState extends State<ContactScreenDesktop> {
                       SizedBox(height: 20,),
                       ContactInfo(
                         cardName: 'Name',
-                        iconName: 'id.svg',
+                        iconName: 'contact-book.png',
                         info: 'Farhan Ishtiaque',
                       ),
                       ContactInfo(
                         cardName: 'Location',
-                        iconName: 'location.svg',
+                        iconName: 'placeholder.png',
                         info: 'Gazipur,Dhaka,Bangladesh',
                       ),
                       ContactInfo(
                         cardName: 'Phone',
-                        iconName: 'call.svg',
+                        iconName: 'phone-call.png',
                         info: '01521217973',
                       ),
                       ContactInfo(
                         cardName: 'Email',
-                        iconName: 'mail.svg',
+                        iconName: 'envelope.png',
                         info: 'rexfarhan@gmail.com',
                       ),
 
@@ -353,7 +352,7 @@ class ContactInfo extends StatelessWidget {
     return Row(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        SvgPicture.asset(iconName,
+        Image.asset(iconName,
           color: Color.fromRGBO(0, 158, 102, 1),
           height: 30,
           width: 40,

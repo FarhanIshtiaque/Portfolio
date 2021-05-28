@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
 import 'package:portfolio/about/componets/header_info.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class PortfolioScreenMobile extends StatefulWidget {
   @override
@@ -37,7 +38,7 @@ class _PortfolioScreenMobileState extends State<PortfolioScreenMobile> {
                           ),
                         ),
                         Opacity(
-                           opacity: .6,
+                           opacity: .8,
                           child: Container(
                             height: 360,
                             width: double.infinity,
@@ -47,7 +48,7 @@ class _PortfolioScreenMobileState extends State<PortfolioScreenMobile> {
                       ],
                     ),
                     Padding(
-                      padding: const EdgeInsets.all(12.0),
+                      padding: const EdgeInsets.all(20.0),
                       child: Column(
 
                         children: [
@@ -55,10 +56,57 @@ class _PortfolioScreenMobileState extends State<PortfolioScreenMobile> {
                             style: TextStyle(
                               fontWeight: FontWeight.w300,
                               color: Color.fromRGBO(0, 158, 102, 1),
-                              fontSize: 12,
+                              fontSize: 14,
                               fontFamily: 'Poppins'
                             ),
-                          )
+                          ),
+                          SizedBox(height: 20,),
+                          Text('Portfolio',
+                            style: TextStyle(
+                                fontWeight: FontWeight.w500,
+                                color: Colors.white,
+                                fontSize: 18,
+                                fontFamily: 'Poppins'
+                            ),
+                          ),
+                          SizedBox(height: 10,),
+                          Text('This is a Beautiful portfolio website and it is fully responsive with some beautiful Animation on it',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              fontWeight: FontWeight.w400,
+                              fontSize: 14,
+                              fontFamily: 'Poppins',
+                              color: Color(0xFFD9f9f9f),
+                            ),
+
+                          ),
+                          SizedBox(height: 15,),
+                          Row(
+                            children: [
+                              Text('Flutter',
+                                style: TextStyle(
+                                   fontFamily: 'Poppins',
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.w200,
+                                  color: Colors.white,
+
+                                ),
+                              )
+                            ],
+                          ),
+                          SizedBox(
+                            height: 15,
+                          ),
+                          GestureDetector(
+                            onTap: () {
+                              launch('https://ishtiaque.me');
+                            },
+                            child: Icon(
+                              Icons.launch,
+                              size: 20,
+                              color: Colors.white,
+                            ),
+                          ),
                         ],
                       ),
                     )

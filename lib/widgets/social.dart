@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+
 import 'package:portfolio/responsive.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -35,7 +35,7 @@ class _SocialIconState extends State<SocialIcon> {
             });
           },
           child: IconSocial(
-            iconName: 'assets/Twitter - Negative.svg',
+            iconName: 'assets/Twitter - Negative.png',
             color:onTt ? Color.fromRGBO(26, 145, 218, 1) : Colors.white,
 
             link: 'https://twitter.com/rexfarhan',
@@ -58,7 +58,7 @@ class _SocialIconState extends State<SocialIcon> {
           },
           child: IconSocial(
             link: 'https://www.facebook.com/farhanishtiaque/',
-            iconName: 'assets/Facebook - Negative.svg',
+            iconName: 'assets/Facebook - Negative.png',
             color: onFb ? Color.fromRGBO(24, 119, 242, 1) : Colors.white,
 
           ),
@@ -81,7 +81,7 @@ class _SocialIconState extends State<SocialIcon> {
           },
           child: IconSocial(
             link: 'https://www.instagram.com/rexfarhan/',
-            iconName: 'assets/Instagram - Negative.svg',
+            iconName: 'assets/Instagram - Negative.png',
             color: onIn ? Color.fromRGBO(221, 42, 123, 1) : Colors.white,
 
           ),
@@ -102,8 +102,8 @@ class _SocialIconState extends State<SocialIcon> {
             });
           },
           child: IconSocial(
-            link: 'https://www.linkedin.com/in/md-farhan-ishtiaque-43714b176/',
-            iconName: 'assets/LinkedIn - Negative.svg',
+            link: 'https://www.linkedin.com/in/FarhanIshtiaque/',
+            iconName: 'assets/LinkedIn - Negative.png',
             color: onln ? Color.fromRGBO(10, 102, 194, 1) : Colors.white,
 
           ),
@@ -125,7 +125,7 @@ class _SocialIconState extends State<SocialIcon> {
           },
           child: IconSocial(
             link: 'https://github.com/FarhanIshtiaque',
-            iconName: 'assets/git.svg',
+            iconName: 'assets/GitHub.png',
             color: onGt ? Color.fromRGBO(64, 120, 192, 1) : Colors.white,
 
           ),
@@ -137,7 +137,7 @@ class _SocialIconState extends State<SocialIcon> {
 
 
         IconSocial(
-          iconName: 'assets/Twitter - Negative.svg',
+          iconName: 'assets/Twitter - Negative.png',
           color: Color.fromRGBO(26, 145, 218, 1) ,
 
           link: 'https://twitter.com/rexfarhan',
@@ -147,7 +147,7 @@ class _SocialIconState extends State<SocialIcon> {
         ),
         IconSocial(
           link: 'https://www.facebook.com/farhanishtiaque/',
-          iconName: 'assets/Facebook - Negative.svg',
+          iconName: 'assets/Facebook - Negative.png',
           color: Color.fromRGBO(24, 119, 242, 1) ,
 
         ),
@@ -156,7 +156,7 @@ class _SocialIconState extends State<SocialIcon> {
         ),
         IconSocial(
           link: 'https://www.instagram.com/rexfarhan/',
-          iconName: 'assets/Instagram - Negative.svg',
+          iconName: 'assets/Instagram - Negative.png',
           color:  Color.fromRGBO(221, 42, 123, 1) ,
 
         ),
@@ -164,8 +164,8 @@ class _SocialIconState extends State<SocialIcon> {
           width: 15,
         ),
         IconSocial(
-          link: 'https://www.linkedin.com/in/md-farhan-ishtiaque-43714b176/',
-          iconName: 'assets/LinkedIn - Negative.svg',
+          link: 'https://www.linkedin.com/in/FarhanIshtiaque/',
+          iconName: 'assets/LinkedIn - Negative.png',
           color: Color.fromRGBO(10, 102, 194, 1) ,
 
         ),
@@ -174,7 +174,7 @@ class _SocialIconState extends State<SocialIcon> {
         ),
         IconSocial(
           link: 'https://github.com/FarhanIshtiaque',
-          iconName: 'assets/git.svg',
+          iconName: 'assets/GitHub.png',
           color: Color.fromRGBO(64, 120, 192, 1),
 
         ),
@@ -202,7 +202,7 @@ class _IconSocialState extends State<IconSocial> {
       onTap: (){
         launch(widget.link);
       },
-      child: SvgPicture.asset(widget.iconName,
+      child: Image.asset(widget.iconName,
         width: 20,
         height: 20,
         color: widget.color,

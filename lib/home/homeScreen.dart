@@ -4,9 +4,7 @@ import 'package:portfolio/responsive.dart';
 import 'dart:math';
 import 'dart:ui';
 import 'package:flutter/rendering.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:portfolio/widgets/customAppBar.dart';
-import 'dart:math' as math;
 import 'package:portfolio/widgets/social.dart';
 import 'package:portfolio/widgets/video_widget.dart';
 
@@ -53,19 +51,15 @@ class _HomeScreenState extends State<HomeScreen> {
               elevation: 0.0,
               actions: [
                 Padding(
-                  padding: const EdgeInsets.only(right: 40,top: 20),
+                  padding: const EdgeInsets.only(right: 30,top: 20),
                   child: PopupMenuButton<String>(
                     color: Color.fromRGBO(16, 16, 16, 1),
-                    child: Transform(
-                      alignment: Alignment.center,
-                      transform: Matrix4.rotationY(math.pi),
-                      child: SvgPicture.asset(
-                        'Menu.svg',
-                        color: Colors.white,
-                        width: 30,
-                        height: 30,
-                      ),
+                    child:Icon(
+                      Icons.menu,
+                      color: Colors.white,
+                      size: 35,
                     ),
+
                     itemBuilder: (context) => <PopupMenuEntry<String>>[
                       PopupMenuItem<String>(
                         value: 'About',
@@ -155,7 +149,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           color: Colors.white,
                           fontWeight: FontWeight.bold,
                           fontFamily: 'Poppins',
-                          fontSize: 35),
+                          fontSize: 34),
                       textAlign: TextAlign.center,
                     ),
                     SizedBox(

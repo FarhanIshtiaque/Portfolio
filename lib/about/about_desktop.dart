@@ -527,7 +527,7 @@ class _AboutDesktopState extends State<AboutDesktop> {
                       Spacer(),
                       SkillCard(
                         skillName: 'UI/UX Design',
-                        assetName: 'assets/ux.svg',
+                        assetName: 'assets/UX.png',
                         description: 'Tools : Adobe XD,Figma',
                         shortDes:
                         'I can made beautiful UI/UX design \nfor your website or mobile app',
@@ -537,7 +537,7 @@ class _AboutDesktopState extends State<AboutDesktop> {
                       ),
                       SkillCard(
                         skillName: 'Mobile App Development',
-                        assetName: 'assets/flutter.svg',
+                        assetName: 'assets/flt.png',
                         description: 'Language: Flutter(Android,iOS)',
                         shortDes:
                         'Apps with responsive UI, beautiful\nanimation with Firebase or Rest API',
@@ -547,7 +547,7 @@ class _AboutDesktopState extends State<AboutDesktop> {
                       ),
                       SkillCard(
                         skillName: 'Web Development',
-                        assetName: 'assets/www.svg',
+                        assetName: 'assets/globe.png',
                         description: 'Language: Flutter,Laravel',
                         shortDes:
                         'I can make full responsive website\nwith flutter and laravel backend',

@@ -5,6 +5,7 @@ import 'package:portfolio/about/about.dart';
 import 'package:portfolio/home/homeScreen.dart';
 import 'package:portfolio/portfolio/porfolio.dart';
 import 'package:portfolio/resume/resume.dart';
+
 import 'package:url_strategy/url_strategy.dart';
 
 import 'contact/contact.dart';
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
 
-      initialRoute: '/',
+      initialRoute: '/splash',
       getPages: [
         GetPage(
           name: '/',

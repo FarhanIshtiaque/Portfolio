@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
+
 
 class SkillCard extends StatefulWidget {
   final String skillName;
@@ -64,7 +64,7 @@ class _SkillCardState extends State<SkillCard> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    SvgPicture.asset(
+                    Image.asset(
                       widget.assetName,
                       color: onContainer
                           ? Color.fromRGBO(0, 158, 102, 1)

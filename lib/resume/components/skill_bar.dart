@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:portfolio/responsive.dart';
 class SkillBar extends StatelessWidget {
   final String skillName;
