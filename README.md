@@ -1,4 +1,4 @@
-# portfolio
+# Personal Portfolio Website
 
 Farhan Ishtiaque
 
